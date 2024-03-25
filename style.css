@@ -206,6 +206,9 @@ section[data-type="D"] blockquote {
 }
 
 @media (min-width: 768px) {
+  :root {
+    --clr-section-a-bg-pattern: url("./images/bg-pattern-quotation.svg") no-repeat calc(100% - 5rem) 0;
+  }
   body {
     min-height: 100vh;
     display: grid;
