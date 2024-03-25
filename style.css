@@ -41,3 +41,161 @@ canvas {
     scroll-behavior: auto !important;
   }
 }
+
+:root {
+  font-family: "Barlow Semi Condensed", sans-serif;
+
+  --fs-sm: 0.6875rem;
+  --fs-md: 0.8125rem;
+  --fs-lg: 1.25rem;
+
+  --fw-normal: 500;
+  --fs-bold: 600;
+
+  --clr-base: #eceef8;
+
+  --clr-section-shadow: rgba(72, 85, 106, 0.25);
+
+  --clr-section-a-bg: #733fc8;
+  --clr-section-a-bg-pattern: url("./images/bg-pattern-quotation.svg") no-repeat calc(100% - 1.5rem) 0;
+  --clr-section-a-outline: #a775f1;
+  --clr-section-a-primary: #fff;
+  --clr-section-a-secondary: #cfcfcf;
+
+  --clr-section-b-outline: transparent;
+  --clr-section-b-bg-pattern: none;
+  --clr-section-b-bg: #48556a;
+  --clr-section-b-primary: #fff;
+  --clr-section-b-secondary: #fff;
+
+  --clr-section-c-outline: transparent;
+  --clr-section-c-bg-pattern: none;
+  --clr-section-c-bg: #fff;
+  --clr-section-c-primary: #48556a;
+  --clr-section-c-secondary: #48556a;
+
+  --clr-section-d-outline: #733fc8;
+  --clr-section-d-bg-pattern: none;
+  --clr-section-d-bg: #19202d;
+  --clr-section-d-primary: #fff;
+  --clr-section-d-secondary: #fff;
+}
+
+body {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-normal);
+
+  background-color: var(--clr-base);
+
+  margin: 4.4375rem 1.5rem;
+}
+
+main {
+  display: grid;
+  gap: 1.5rem;
+}
+
+section {
+  padding: 1.625rem 2rem 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+
+  box-shadow: 2.5rem 3.75rem 3.175rem -2.9375rem var(--clr-section-shadow);
+}
+
+section header {
+  line-height: 1;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+section header img {
+  grid-row: span 2;
+  width: 1.75rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+section header p {
+  margin-top: 0.25rem;
+  font-size: var(--fs-sm);
+}
+
+section > p {
+  font-size: var(--fs-lg);
+  font-weight: var(--fs-bold);
+}
+
+section header {
+  margin-bottom: 1.125rem;
+}
+
+section blockquote {
+  margin-top: 1rem;
+}
+
+section header p {
+  opacity: 0.5;
+}
+
+section blockquote {
+  opacity: 0.7;
+}
+
+section[data-type="A"] {
+  background: var(--clr-section-a-bg-pattern);
+  background-color: var(--clr-section-a-bg);
+  color: var(--clr-section-a-primary);
+}
+
+section[data-type="A"] header img {
+  outline: 2px solid var(--clr-section-a-outline);
+}
+
+section[data-type="A"] blockquote {
+  color: var(--clr-section-a-secondary);
+}
+
+section[data-type="B"] {
+  background: var(--clr-section-b-bg-pattern);
+  background-color: var(--clr-section-b-bg);
+  color: var(--clr-section-b-primary);
+}
+
+section[data-type="B"] header img {
+  outline: 2px solid var(--clr-section-b-outline);
+}
+
+section[data-type="B"] blockquote {
+  color: var(--clr-section-b-secondary);
+}
+
+section[data-type="C"] {
+  background: var(--clr-section-c-bg-pattern);
+  background-color: var(--clr-section-c-bg);
+  color: var(--clr-section-c-primary);
+}
+
+section[data-type="C"] header img {
+  outline: 2px solid var(--clr-section-c-outline);
+}
+
+section[data-type="C"] blockquote {
+  color: var(--clr-section-c-secondary);
+}
+
+section[data-type="D"] {
+  background: var(--clr-section-d-bg-pattern);
+  background-color: var(--clr-section-d-bg);
+  color: var(--clr-section-d-primary);
+}
+
+section[data-type="D"] header img {
+  outline: 2px solid var(--clr-section-d-outline);
+}
+
+section[data-type="D"] blockquote {
+  color: var(--clr-section-d-secondary);
+}
