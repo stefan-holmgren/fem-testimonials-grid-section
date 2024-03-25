@@ -87,7 +87,7 @@ body {
 
   background-color: var(--clr-base);
 
-  margin: 4.4375rem 1.5rem;
+  padding: 4.4375rem 1.5rem;
 }
 
 main {
@@ -144,6 +144,11 @@ section blockquote {
   opacity: 0.7;
 }
 
+section blockquote::before,
+section blockquote::after {
+  content: " “ ";
+}
+
 section[data-type="A"] {
   background: var(--clr-section-a-bg-pattern);
   background-color: var(--clr-section-a-bg);
@@ -198,4 +203,43 @@ section[data-type="D"] header img {
 
 section[data-type="D"] blockquote {
   color: var(--clr-section-d-secondary);
+}
+
+@media (min-width: 768px) {
+  body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+  }
+
+  main {
+    grid-template-areas:
+      "A A B E"
+      "C D D E";
+
+    row-gap: 1.5rem;
+    column-gap: 1.875rem;
+
+    max-width: 69.375rem;
+  }
+
+  section:nth-child(1) {
+    grid-area: A;
+  }
+  section:nth-child(2) {
+    max-width: 15.9375rem;
+    grid-area: B;
+  }
+  section:nth-child(3) {
+    max-width: 15.9375rem;
+    grid-area: C;
+  }
+  section:nth-child(4) {
+    grid-area: D;
+  }
+  section:nth-child(5) {
+    max-width: 15.9375rem;
+    grid-area: E;
+  }
 }
